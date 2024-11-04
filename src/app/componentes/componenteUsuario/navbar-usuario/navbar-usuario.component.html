@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent mb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="'perfil-usuario'">VanGo</a>
+        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto"> 
+                <li class="nav-item active">
+                    <a class="nav-link" [routerLink]="'perfil-usuario'" (click)="isMenuCollapsed = true">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'buscar-usuario'" (click)="isMenuCollapsed = true">Buscar Viagem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'minhasviagens-usuario'" (click)="isMenuCollapsed = true">Minhas Viagens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'notificacao-usuario'" (click)="isMenuCollapsed = true">Notificação</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto"> 
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="''" (click)="isMenuCollapsed = true">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h2>Meus Dados</h2>
+  <div *ngIf="empresa">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-header bg-warning text-white">
+          {{ empresa.nome }}
+        </div>
+        <div class="card-body">
+          <p><strong>CNPJ:</strong> {{ empresa.cnpj }}</p>
+          <p><strong>Endereço:</strong> {{ empresa.endereco }}</p>
+          <p><strong>Telefone:</strong> {{ empresa.telefone }}</p>
+          <p><strong>E-mail:</strong> {{ empresa.email }}</p>
+          <div class="d-flex justify-content-end mt-4">
+            <button class="btn btn-primary me-2">Atualizar Dados</button>
+            <button class="btn btn-danger">Excluir Conta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

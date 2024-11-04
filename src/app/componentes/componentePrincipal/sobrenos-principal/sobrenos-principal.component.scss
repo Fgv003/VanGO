@@ -1,0 +1,46 @@
+header {
+    padding: 2rem; /* Espaçamento interno no cabeçalho */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 2rem; /* Espaçamento inferior */
+}
+
+header h5 {
+    color: black; /* Cor do título */
+    margin-bottom: 1rem; /* Espaçamento inferior no título */
+}
+
+header p {
+    color: #353535; /* Cor do texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+.d-flex {
+    display: flex; /* Usar flexbox para alinhar itens */
+}
+
+.nav-pills {
+    
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 1rem; /* Espaçamento interno */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.nav-pills button {
+    background-color: transparent; /* Fundo transparente para os botões */
+    color: black; /* Cor do texto dos botões */
+    border: none; /* Remove borda padrão dos botões */
+    text-align: left; /* Alinha texto à esquerda */
+    width: 100%; /* Largura total para os botões */
+    padding: 10px; /* Espaçamento interno nos botões */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.nav-pills button:hover {
+    background-color: rgba(255, 165, 0, 0.1); /* Fundo laranja claro ao passar o mouse */
+}
+
+.nav-pills .nav-link.active {
+    background-color: orange; /* Cor do fundo para o item ativo */
+    color: white; /* Cor do texto do item ativo */
+}

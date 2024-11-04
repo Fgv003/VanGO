@@ -1,0 +1,43 @@
+.card {
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.2s; /* Animação suave ao passar o mouse */
+    width: 300px;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.card-header {
+    background-color: orange; /* Cor de fundo do cabeçalho do card */
+    color: white; /* Cor do texto do cabeçalho */
+    font-weight: bold; /* Negrito no cabeçalho */
+    border-top-left-radius: 10px; /* Bordas arredondadas no topo */
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 1.5rem; /* Padding maior para o corpo do card */
+    background-color: white; /* Cor de fundo do corpo do card */
+}
+
+.card-title {
+    font-weight: bold; /* Negrito para o título do card */
+    color: #333; /* Cor do texto */
+}
+
+.card-text {
+    color: #666; /* Cor do texto do parágrafo */
+    margin-bottom: 1rem; /* Espaçamento inferior no texto */
+}
+
+.btn-primary {
+    background-color: orange; /* Cor de fundo do botão */
+    border: none; /* Remove borda padrão do botão */
+    transition: background-color 0.3s; /* Transição suave para a cor do botão */
+}
+
+.btn-primary:hover {
+    background-color: darkorange; /* Cor mais escura ao passar o mouse */
+}

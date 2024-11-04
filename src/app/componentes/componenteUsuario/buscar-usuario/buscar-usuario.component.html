@@ -1,0 +1,26 @@
+<div class="container">
+    <h2 class="my-4 text">Buscar Viagem</h2>
+  
+    <div class="mb-3">
+      <label for="origem" class="form-label">Origem</label>
+      <input type="text" class="form-control w-50" id="origem" placeholder="Buscar endereço...">
+    </div>
+  
+    <div class="mb-3">
+      <label for="destino" class="form-label">Destino</label>
+      <input type="text" class="form-control w-50" id="destino" placeholder="Buscar endereço...">
+    </div>
+  
+    <!-- Menu com Dias da Semana -->
+    <div class="d-flex flex-wrap mb-3">
+      <button *ngFor="let dia of diasSemana" class="btn btn-laranja me-2" (click)="mostrarInformacao(dia)">
+        {{ dia }}
+      </button>
+    </div>
+  
+    <div *ngIf="informacao">
+      <h3>Informações</h3>
+      <p>{{ informacao }}</p>
+    </div>
+  </div>
+  

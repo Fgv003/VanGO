@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h2 class="text mb-4">Meus Dados</h2>
+  <div *ngIf="usuario">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-header bg-warning text-white">
+          <h5 class="mb-0">{{ usuario.nome }}</h5>
+        </div>
+        <div class="card-body">
+          <p><strong>Nome:</strong> {{ usuario.nome }}</p>
+          <p><strong>Endereço:</strong> {{ usuario.endereco }}</p>
+          <p><strong>Telefone:</strong> {{ usuario.telefone }}</p>
+          <p><strong>E-mail:</strong> {{ usuario.email }}</p>
+          <p><strong>Idade:</strong> {{ usuario.idade }}</p>
+          <div class="d-flex justify-content-end mt-4">
+            <button class="btn btn-primary me-2">Atualizar Dados</button>
+            <button class="btn btn-danger">Excluir Conta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

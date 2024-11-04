@@ -1,0 +1,40 @@
+.custom-card {
+    border-radius: 10px; /* Bordas arredondadas menores */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    padding: 1.5rem; /* Espaçamento interno menor */
+    background-color: #fff; /* Cor de fundo do cartão */
+}
+
+.brand-title {
+    margin-bottom: 15px; /* Espaçamento inferior reduzido */
+    color: orange; /* Cor do título */
+    font-weight: bold; /* Negrito */
+    font-size: 1.25rem; /* Tamanho da fonte menor */
+    text-align: center; /* Centraliza o texto */
+}
+
+.form-label {
+    font-weight: bold; /* Negrito para os rótulos */
+    color: #333; /* Cor dos rótulos */
+}
+
+.btn-primary {
+    background-color: orange; /* Cor do botão */
+    border: none; /* Remover borda */
+    font-weight: bold; /* Negrito */
+}
+
+.btn-primary:hover {
+    background-color: #e07b00; /* Cor ao passar o mouse */
+}
+
+input.form-control {
+    border: 1px solid #ccc; /* Borda do campo mais fina */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 0.5rem; /* Espaçamento interno menor */
+}
+
+input.form-control:focus {
+    border-color: orange; /* Cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); /* Sombra ao focar */
+}

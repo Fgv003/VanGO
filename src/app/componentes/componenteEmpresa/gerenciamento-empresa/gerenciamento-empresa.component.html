@@ -1,0 +1,97 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <button ngbNavLink>Geral</button>
+    <ng-template ngbNavContent>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Registro</th>
+            <th>Motorista</th>
+            <th>Van (ID)</th>
+            <th>Placa</th>
+            <th>Lugares</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let registro of registros">
+            <td>{{ registro.idMotorista }}</td>
+            <td>{{ registro.motorista }}</td>
+            <td>{{ registro.idVan }}</td>
+            <td>{{ registro.placa }}</td>
+            <td>{{ registro.lugares }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <button ngbNavLink>Vans</button>
+    <ng-template ngbNavContent>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Placa</th>
+            <th>Ano</th>
+            <th>Cor</th>
+            <th>Lugares</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let van of vans">
+            <td>{{ van.placa }}</td>
+            <td>{{ van.ano }}</td>
+            <td>{{ van.cor }}</td>
+            <td>{{ van.lugares }}</td>
+            <td>
+              <button class="btn-editar" (click)="editarVan()">Editar</button>
+              <button class="btn-excluir" (click)="excluirVan()">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <button ngbNavLink>Motoristas</button>
+    <ng-template ngbNavContent>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Idade</th>
+            <th>CNH</th>
+            <th>Categoria CNH</th>
+            <th>Validade</th>
+            <th>Veículo Cadastrado</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let motorista of motoristas">
+            <td>{{ motorista.nome }}</td>
+            <td>{{ motorista.endereco}}</td>
+            <td>{{ motorista.telefone }}</td>
+            <td>{{ motorista.email }}</td>
+            <td>{{ motorista.idade }}</td>
+            <td>{{ motorista.cnh }}</td>
+            <td>{{ motorista.categoriaCnh }}</td>
+            <td>{{ motorista.validade| date }}</td>
+            <td>{{ motorista.veiculoCadastrado }}</td>
+            <td>
+              <button class="btn-editar" (click)="editarMotorista()">Editar</button>
+              <button class="btn-excluir" (click)="excluirMotorista()">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+<pre>Active: {{ active }}</pre>

@@ -1,0 +1,41 @@
+<header class="text-center mb-4">
+	<h5>Sobre Nós</h5>
+	<p>A VanGo é mais do que uma plataforma de transporte; somos um facilitador de mobilidade urbana, projetada para conectar motoristas, passageiros e empresas com segurança e eficiência. Nossa proposta é revolucionar o transporte escolar e corporativo, trazendo tecnologia e inovação para o dia a dia dos nossos usuários.
+	</p>
+	<h5> Nossa Equipe </h5>
+     <p>A equipe da VanGo é composta por especialistas em transporte, tecnologia e atendimento ao cliente, todos dedicados a oferecer uma experiência de transporte superior. Juntos, trabalhamos para inovar e aprimorar constantemente nossos serviços.
+	 </p>	
+</header>
+<div class="d-flex">
+	<div ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills flex-column" orientation="vertical">
+		<ng-container ngbNavItem="top">
+			<button ngbNavLink>Missão</button>
+			<ng-template ngbNavContent>
+				<p>
+					Nossa missão é garantir um transporte seguro e confiável para estudantes e trabalhadores, utilizando tecnologia de ponta para otimizar rotas e melhorar a comunicação entre motoristas e usuários.
+				</p>
+			</ng-template>
+		</ng-container>
+		<ng-container ngbNavItem="middle">
+			<button ngbNavLink>Visão</button>
+			<ng-template ngbNavContent>
+				<p>
+					Nosso objetivo é ser a principal plataforma de transporte escolar e corporativo no Brasil, promovendo um modelo de transporte sustentável e acessível para todos, contribuindo para a mobilidade urbana e a redução do trânsito.
+				</p>
+			</ng-template>
+		</ng-container>
+		<ng-container ngbNavItem="bottom">
+			<button ngbNavLink>Valores</button>
+			<ng-template ngbNavContent>
+				<p>
+					Segurança: A segurança dos nossos usuários é nossa prioridade máxima.</p>
+                    <p>Transparência: Mantemos uma comunicação clara e aberta com nossos usuários e parceiros.</p>
+					<p>Inovação: Investimos em tecnologia para constantemente melhorar nossos serviços.</p>
+					<p>Empatia: Compreendemos as necessidades dos nossos usuários e trabalhamos para superá-las.</p>
+					<p>Sustentabilidade: Comprometemo-nos com práticas que respeitem o meio ambiente.
+				</p>
+			</ng-template>
+		</ng-container>
+	</div>
+
+	<div [ngbNavOutlet]="nav" class="ms-4"></div>

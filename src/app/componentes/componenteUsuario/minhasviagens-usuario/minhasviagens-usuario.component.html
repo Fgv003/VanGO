@@ -1,0 +1,15 @@
+<div class="container">
+    <h2 class="my-4 text">Minhas Viagens</h2>
+  
+    <!-- Menu com Dias da Semana -->
+    <div class="d-flex flex-wrap mb-3">
+      <button *ngFor="let dia of diasSemana" class="btn btn-laranja me-2" (click)="mostrarInformacao(dia)">
+        {{ dia }}
+      </button>
+    </div>
+  
+    <div *ngIf="informacao">
+      <h3>Informações</h3>
+      <p>{{ informacao }}</p>
+    </div>
+  </div>  

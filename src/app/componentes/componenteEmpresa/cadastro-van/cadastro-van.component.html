@@ -1,0 +1,25 @@
+<div class="container">
+<h2>Cadastro Van</h2>
+    <form (ngSubmit)="onSubmit()" #vanForm="ngForm">
+      <div class="mb-3">
+        <label for="placa" class="form-label">Placa</label>
+        <input type="text" id="placa" class="form-control" required [(ngModel)]="van.placa" name="placa">
+      </div>
+  
+      <div class="mb-3">
+        <label for="cor" class="form-label">Cor</label>
+        <input type="text" id="cor" class="form-control" required [(ngModel)]="van.cor" name="cor">
+      </div>
+      <div class="mb-3">
+        <label for="ano" class="form-label">Ano</label>
+        <input type="number" id="ano" class="form-control" required [(ngModel)]="van.ano" name="ano">
+      </div>
+  
+      <div class="mb-3">
+        <label for="lugares" class="form-label">Lugares</label>
+        <input type="number" id="lugares" class="form-control" required [(ngModel)]="van.lugares" name="lugares">
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="!vanForm.form.valid">Cadastrar</button>
+    </form>
+    </div>

@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <h2>Meus Dados</h2>
+  <div *ngIf="motorista">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-header bg-warning text-white">
+          {{ motorista.nome }}
+        </div>
+        <div class="card-body">
+          <p><strong>Nome:</strong> {{ motorista.nome }}</p>
+          <p><strong>Endereço:</strong> {{ motorista.endereco }}</p>
+          <p><strong>Telefone:</strong> {{ motorista.telefone }}</p>
+          <p><strong>E-mail:</strong> {{ motorista.email }}</p>
+          <p><strong>Senha:</strong> {{ motorista.senha }}</p>
+          <p><strong>Idade:</strong> {{ motorista.idade }}</p>
+          <p><strong>CNH:</strong> {{ motorista.cnh }}</p>
+          <p><strong>Categoria CNH:</strong> {{ motorista.catcnh }}</p>
+          <p><strong>Validade:</strong> {{ motorista.validade }}</p>
+          <p><strong>Veículo Cadastrado:</strong> {{ motorista.van }}</p>
+          <div class="d-flex justify-content-end mt-4">
+            <button class="btn btn-primary me-2">Atualizar Dados</button>
+            <button class="btn btn-danger">Excluir Conta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

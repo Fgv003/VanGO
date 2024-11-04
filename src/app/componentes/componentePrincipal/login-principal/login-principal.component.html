@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-md-4">
+          <div class="card mt-5 custom-card">
+              <div class="card-body">
+                  <h5 class="text-center brand-title">VanGo</h5>
+                  <form>
+                      <div class="mb-3">
+                          <label for="email" class="form-label" name = usuario>Login</label>
+                          <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="usuario" [(ngModel)] = "usuario" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="password" class="form-label">Senha</label>
+                          <input type="password" class="form-control" id="password" placeholder="Digite sua senha" name = "senha" [(ngModel)] = 'senha' required>
+                      </div>
+                      <button type="submit" class="btn btn-primary w-100" (click)="verificarLogin()">Entrar</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

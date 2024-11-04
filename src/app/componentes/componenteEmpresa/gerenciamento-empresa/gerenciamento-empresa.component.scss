@@ -1,0 +1,67 @@
+
+
+/* Estilo das abas */
+.nav-tabs {
+    border-bottom: 1px solid #ccc; /* Borda inferior das abas */
+}
+
+/* Estilo dos botões das abas */
+.nav-tabs button {
+    border: none; /* Remover borda */
+    background-color: transparent; /* Fundo transparente */
+    padding: 10px 15px; /* Espaçamento interno */
+    font-weight: bold; /* Negrito */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo dos botões das abas ao serem selecionados */
+.nav-tabs button.active {
+    background-color: orange; /* Cor do fundo ativo */
+    color: white; /* Cor do texto ativo */
+}
+
+/* Estilo das tabelas */
+.table {
+    width: 100%; /* Tabela ocupa toda a largura */
+    border-collapse: collapse; /* Juntar bordas */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.table th,
+.table td {
+    border: 1px solid #ccc; /* Borda nas células */
+    padding: 10px; /* Espaçamento interno */
+    text-align: left; /* Alinhamento à esquerda */
+}
+
+.table th {
+    background-color: #f2f2f2; /* Cor de fundo dos cabeçalhos */
+    font-weight: bold; /* Negrito nos cabeçalhos */
+}
+
+/* Estilo dos botões de ação */
+.btn-editar {
+    background-color: green; /* Cor do botão */
+    border: none; /* Remover borda */
+    color: white; /* Cor do texto */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+}
+
+.btn-editar:hover {
+    background-color: #0af558; /* Cor ao passar o mouse */
+}
+/* Estilo dos botões de ação */
+.btn-excluir {
+    background-color: red; /* Cor do botão */
+    border: none; /* Remover borda */
+    color: white; /* Cor do texto */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+}
+
+.btn-excluir:hover {
+    background-color: #fc1919; /* Cor ao passar o mouse */
+}
