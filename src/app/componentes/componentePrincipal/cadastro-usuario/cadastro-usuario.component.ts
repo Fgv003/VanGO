@@ -1,26 +1,41 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../../../service/api.service';  // Importe o ApiService
+import { Usuario } from '../../../models/usuario.model';  // Importe o modelo de Usuário
 
 @Component({
   selector: 'app-cadastro-usuario',
   templateUrl: './cadastro-usuario.component.html',
-  styleUrl: './cadastro-usuario.component.scss'
+  styleUrls: ['./cadastro-usuario.component.scss']  // Corrigido de 'styleUrl' para 'styleUrls'
 })
 export class CadastroUsuarioComponent {
-  usuario = {
-    nome: '',
+  usuario: Usuario = {
+    name: '',
     endereco: '',
     telefone: '',
     email: '',
-    senha: '',
-    idade: null,
+    password: '',
+    idade: 0,
     periodoAula: '',
-    instituicaoDeEnsino: '',
+    instituicaoDeEnsino: ''
   };
 
+  constructor(private apiService: ApiService) {}  // Injeta o ApiService no construtor
+
   onSubmit() {
-    // Aqui você pode adicionar a lógica para enviar os dados do usuário
-    console.log('Usuário cadastrado:', this.usuario);
-    // Resetar o formulário, se necessário
-    this.usuario = { nome: '', endereco:'', telefone:'', email: '', senha: '', idade: null, periodoAula:'', instituicaoDeEnsino:'' };
+
+    console.log(this.usuario)
+    // Envia os dados para o backend via serviço ApiService
+    this.apiService.postAddUsuario(this.usuario).subscribe(
+      (data: Usuario) => {
+        alert('Passageiro cadastrado com sucesso!');
+        console.log('Dados do Passageiro cadastrado:', data);
+        // Resetar os campos do formulário
+        this.usuario = { name: '', endereco:'', telefone:'', email: '', password: '', idade: 0, periodoAula:'', instituicaoDeEnsino:'' };
+      },
+      (error) => {
+        console.error('Erro ao Passageiro usuário:', error);
+        alert('Erro ao cadastrar Passageiro!');
+      }
+    );
   }
 }

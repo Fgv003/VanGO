@@ -10,8 +10,7 @@ import { Enterprise } from '../../../models/enterprise.model';
 export class CadastroEmpresaComponent {
   // Inicializa a empresa com um id padrão
   empresa: Enterprise = {
-    id: 0, // Inicialize com um valor padrão
-    nameEnterprise: '',
+    name: '',
     cnpj: '',
     endereco: '',
     telephone: '',

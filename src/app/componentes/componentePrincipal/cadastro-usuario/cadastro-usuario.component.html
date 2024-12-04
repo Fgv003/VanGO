@@ -3,7 +3,7 @@
   <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
     <div class="mb-3">
       <label for="nome" class="form-label">Nome</label>
-      <input type="text" id="nome" class="form-control" required [(ngModel)]="usuario.nome" name="nome">
+      <input type="text" id="nome" class="form-control" required [(ngModel)]="usuario.name" name="nome">
     </div>
 
     <div class="mb-3">
@@ -23,7 +23,7 @@
 
     <div class="mb-3">
       <label for="senha" class="form-label">Senha</label>
-      <input type="password" id="senha" class="form-control" required [(ngModel)]="usuario.senha" name="senha">
+      <input type="password" id="senha" class="form-control" required [(ngModel)]="usuario.password" name="senha">
     </div>
 
     <div class="mb-3">

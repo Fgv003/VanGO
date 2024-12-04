@@ -1,8 +1,8 @@
 import { Address } from "cluster";
 
 export interface Enterprise {
-    id: number;
-    nameEnterprise: string;
+    id?: number;
+    name: string;
     cnpj: string;
     endereco: string;
     telephone: string;

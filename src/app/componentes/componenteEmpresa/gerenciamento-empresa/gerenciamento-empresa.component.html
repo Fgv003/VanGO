@@ -1,14 +1,18 @@
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <!-- Aba Geral -->
   <li [ngbNavItem]="1">
     <button ngbNavLink>Geral</button>
     <ng-template ngbNavContent>
       <table class="table">
         <thead>
           <tr>
-            <th>Registro</th>
+            <th>ID Motorista</th>
             <th>Motorista</th>
-            <th>Van (ID)</th>
+            <th>Telefone</th>
+            <th>ID Van</th>
             <th>Placa</th>
+            <th>Modelo</th>
+            <th>Cor</th>
             <th>Lugares</th>
           </tr>
         </thead>
@@ -16,14 +20,19 @@
           <tr *ngFor="let registro of registros">
             <td>{{ registro.idMotorista }}</td>
             <td>{{ registro.motorista }}</td>
+            <td>{{ registro.telefone }}</td>
             <td>{{ registro.idVan }}</td>
             <td>{{ registro.placa }}</td>
+            <td>{{ registro.modelo }}</td>
+            <td>{{ registro.cor }}</td>
             <td>{{ registro.lugares }}</td>
           </tr>
         </tbody>
       </table>
     </ng-template>
   </li>
+
+  <!-- Aba Vans -->
   <li [ngbNavItem]="2">
     <button ngbNavLink>Vans</button>
     <ng-template ngbNavContent>
@@ -33,6 +42,7 @@
             <th>Placa</th>
             <th>Ano</th>
             <th>Cor</th>
+            <th>Modelo</th>
             <th>Lugares</th>
             <th>Ações</th>
           </tr>
@@ -42,16 +52,19 @@
             <td>{{ van.placa }}</td>
             <td>{{ van.ano }}</td>
             <td>{{ van.cor }}</td>
-            <td>{{ van.lugares }}</td>
+            <td>{{ van.modelo }}</td>
+            <td>{{ van.qtdLugares }}</td>
             <td>
-              <button class="btn-editar" (click)="editarVan()">Editar</button>
-              <button class="btn-excluir" (click)="excluirVan()">Excluir</button>
+              <button class="btn-editar" (click)="editarVan(van.placa)">Editar</button>
+              <button class="btn-excluir" (click)="excluirVan(van.placa)">Excluir</button>
             </td>
           </tr>
         </tbody>
       </table>
     </ng-template>
   </li>
+
+  <!-- Aba Motoristas -->
   <li [ngbNavItem]="3">
     <button ngbNavLink>Motoristas</button>
     <ng-template ngbNavContent>
@@ -72,18 +85,18 @@
         </thead>
         <tbody>
           <tr *ngFor="let motorista of motoristas">
-            <td>{{ motorista.nome }}</td>
-            <td>{{ motorista.endereco}}</td>
-            <td>{{ motorista.telefone }}</td>
+            <td>{{ motorista.name }}</td>
+            <td>{{ motorista.address }}</td>
+            <td>{{ motorista.telephone }}</td>
             <td>{{ motorista.email }}</td>
-            <td>{{ motorista.idade }}</td>
+            <td>{{ motorista.age }}</td>
             <td>{{ motorista.cnh }}</td>
-            <td>{{ motorista.categoriaCnh }}</td>
-            <td>{{ motorista.validade| date }}</td>
-            <td>{{ motorista.veiculoCadastrado }}</td>
+            <td>{{ motorista.cnhCategory }}</td>
+            <td>{{ motorista.validityCnh }}</td>
+            <td>{{ motorista.vehicle }}</td>
             <td>
-              <button class="btn-editar" (click)="editarMotorista()">Editar</button>
-              <button class="btn-excluir" (click)="excluirMotorista()">Excluir</button>
+              <button class="btn btn-success">Editar</button>
+              <button class="btn btn-danger">Excluir</button>
             </td>
           </tr>
         </tbody>
@@ -93,5 +106,3 @@
 </ul>
 
 <div [ngbNavOutlet]="nav" class="mt-2"></div>
-
-<pre>Active: {{ active }}</pre>
