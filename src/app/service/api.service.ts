@@ -25,6 +25,6 @@ export class ApiService {
 
   // Método para adicionar uma nova empresa com base no ID (se aplicável)
   postAddEnterprise(enterprise: Enterprise): Observable<Enterprise> {
-    return this.http.post<Enterprise>(`${this.apiUrl}/enterprise/`, enterprise);
+    return this.http.post<Enterprise>(`${this.apiUrl}/enterprises/${enterprise.id}`, enterprise);
   }
 }

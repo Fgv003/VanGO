@@ -22,14 +22,16 @@ export class CadastroEmpresaComponent {
   constructor(private apiService: ApiService) {}
 
   postEnterprise() {
-    // Aqui, atribua um id válido. Você pode definir uma lógica para incrementá-lo ou gerenciá-lo conforme necessário.
-    this.empresa.id = this.generateId(); // Gera um id
-
+    // O ID será gerado pelo backend, portanto não inclua `id` na requisição.
     this.apiService.postAddEnterprise(this.empresa).subscribe(
       (data: Enterprise) => {
-        alert('Empresa cadastrada com sucesso!');
+        alert('Empresa cadastrada com sucesso!  - Senha padrão: 123');
         console.log('Dados da empresa cadastrada:', data);
       },
+      (error) => {
+        console.error('Erro ao cadastrar empresa:', error);
+        alert('Erro ao cadastrar empresa!');
+      }
     );
   }
 
@@ -37,9 +39,7 @@ export class CadastroEmpresaComponent {
     this.postEnterprise();
   }
 
-  // Método para gerar um ID de forma dinâmica (apenas exemplo, você deve gerenciar isso conforme sua lógica de negócio)
   private generateId(): number {
-    // Aqui você pode implementar a lógica para gerar um ID. Exemplo simples:
-    return Math.floor(Math.random() * 10000) + 1; // Gera um id aleatório entre 1 e 10000
+    return Math.floor(Math.random() * 100) + 1; // Gera um id aleatório entre 1 e 10000
   }
 }
