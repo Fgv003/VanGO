@@ -13,7 +13,7 @@ export class LoginPrincipalComponent {
 
   constructor(private router : Router) {}
   verificarLogin(){
-      if (this.usuario == 'admin' && this.senha == 'admin') {
+      if (this.senha == '123') {
         this.router.navigate(['/gerenciamento-empresa']);
       } else if(this.usuario == 'abc@gmail.com' && this.senha == '12345'){
         this.router.navigate(['/minhasrotas-motorista'])
