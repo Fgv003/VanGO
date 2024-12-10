@@ -37,7 +37,7 @@ export class LoginPrincipalComponent {
               );
 
               if (usuarioEncontrado) {
-                this.router.navigate(['/minhasrotas-motorista']);
+                this.router.navigate(['/buscar-usuario']);
               } else {
                 this.erro = true;
                 alert('Login ou senha incorretos');

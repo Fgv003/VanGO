@@ -7,9 +7,13 @@
         {{ dia }}
       </button>
     </div>
+    
   
     <div *ngIf="informacao">
       <h3>Informações</h3>
       <p>{{ informacao }}</p>
+      <div>
+        <img [src]="imagemSrc" alt="Imagem sobre o dia selecionado" />
+      </div>
     </div>
   </div>  

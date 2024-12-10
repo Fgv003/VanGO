@@ -54,4 +54,10 @@ export class ApiService {
   getDriversByEnterprise(empresaId: number): Observable<Driver[]> {
     return this.http.get<Driver[]>(`${this.apiUrl}/enterprises/${empresaId}/drivers`);
   }
+
+  // Método para cadastrar a van
+  cadastrarVan(van: any, empresaId: number): Observable<any> {
+    const url = `${this.apiUrl}/enterprises/${empresaId}/vehicles`;  // Rota para cadastrar a van
+    return this.http.post(url, van);
+  }
 }

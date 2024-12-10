@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class MinhasviagensUsuarioComponent {
   diasSemana: string[] = [];
   informacao: string = '';
+  imagemSrc: any;
 
   constructor() {
     this.gerarDiasSemana();
@@ -27,5 +28,13 @@ export class MinhasviagensUsuarioComponent {
 
   mostrarInformacao(dia: string) {
     this.informacao = `Informações sobre ${dia}`;
+  
+    // Mapeamento de imagens baseado nos dias
+    const imagens: { [key: string]: string } = {
+      '09/12': 'https://github.com/Fgv003/VanGO/blob/main/src/app/assets/Card-1.png',
+      '10/12': 'https://github.com/Fgv003/VanGO/blob/main/src/app/assets/Card-1.png',
+    };
+
+    this.imagemSrc = imagens[dia] || 'https://github.com/Fgv003/VanGO/blob/main/src/app/assets/Card-1.png'
   }
 }
